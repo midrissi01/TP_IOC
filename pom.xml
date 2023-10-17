@@ -29,11 +29,13 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <artifactId>spring-beans</artifactId>
             <version>5.3.25</version>
         </dependency>
+
 
 
     </dependencies>

@@ -22,10 +22,10 @@ public class Pres2 {
         //MetierImpl metier= new MetierImpl();
         String metierClassname= scanner.nextLine();
         Class cMetier=Class.forName(metierClassname);
-        IMetier metier= (IMetier) cMetier.getConstructor().newInstance();
-        //metier.setDao(dao);
-        Method setDao = cMetier.getDeclaredMethod("setDao",IDao.class);
-        setDao.invoke(metier,dao);//injection des dependances
+        IMetier metier= (IMetier) cMetier.getConstructor(IDao.class).newInstance(dao);
+        //metier.setDao(dao);//
+       // Method setDao = cMetier.getDeclaredMethod("setDao",IDao.class);
+       // setDao.invoke(metier,dao);//injection des dependances
         System.out.println("RES"+metier.calcul());
 
     }
